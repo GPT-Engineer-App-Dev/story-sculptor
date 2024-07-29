@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { navItems } from "./nav-items";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -12,14 +13,17 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <BrowserRouter>
-        <Navbar />
-        <main className="pt-16">
-          <Routes>
-            {navItems.map(({ to, page }) => (
-              <Route key={to} path={to} element={page} />
-            ))}
-          </Routes>
-        </main>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow pt-16">
+            <Routes>
+              {navItems.map(({ to, page }) => (
+                <Route key={to} path={to} element={page} />
+              ))}
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
