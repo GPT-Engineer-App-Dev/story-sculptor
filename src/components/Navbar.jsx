@@ -3,11 +3,11 @@ import { navItems } from "../nav-items";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-card text-card-foreground shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-gray-800">
+            <Link to="/" className="text-xl font-bold text-primary">
               HN Reader
             </Link>
           </div>
@@ -16,7 +16,7 @@ const Navbar = () => {
               <Link
                 key={item.to}
                 to={item.to}
-                className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-secondary"
               >
                 {item.title}
               </Link>

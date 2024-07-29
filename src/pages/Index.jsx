@@ -7,11 +7,11 @@ const Index = () => {
 
   return (
     <div className="container mx-auto px-4 py-6">
-      <h1 className="text-3xl font-bold mb-6">Top 100 Hacker News Stories</h1>
+      <h1 className="text-3xl font-bold mb-6 text-foreground">Top 100 Hacker News Stories</h1>
       <Input
         type="text"
         placeholder="Search stories..."
-        className="mb-6"
+        className="mb-6 bg-card text-card-foreground"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

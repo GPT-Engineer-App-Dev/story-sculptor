@@ -47,17 +47,17 @@ const HackerNews = ({ searchTerm }) => {
   return (
     <ul className="space-y-4">
       {filteredStories.map((story) => (
-        <li key={story.objectID} className="bg-white p-4 rounded-lg shadow">
-          <h2 className="text-xl font-semibold mb-2">{story.title}</h2>
+        <li key={story.objectID} className="bg-card p-4 rounded-lg shadow">
+          <h2 className="text-xl font-semibold mb-2 text-foreground">{story.title}</h2>
           <div className="flex justify-between items-center">
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-muted-foreground">
               {story.points} upvotes
             </span>
             <a
               href={story.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-blue-500 hover:text-blue-700"
+              className="flex items-center text-primary hover:text-accent"
             >
               Read more <ExternalLink className="ml-1 h-4 w-4" />
             </a>
