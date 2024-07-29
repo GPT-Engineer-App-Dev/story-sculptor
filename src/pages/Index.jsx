@@ -2,7 +2,7 @@ import { useState } from 'react';
 import HackerNews from '../components/HackerNews';
 import { Input } from "@/components/ui/input";
 
-const Index = () => {
+const AppPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   return (
@@ -20,4 +20,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default AppPage;
