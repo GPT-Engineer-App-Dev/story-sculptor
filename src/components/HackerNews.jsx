@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ExternalLink } from 'lucide-react';
 import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
 
 const HackerNews = ({ searchTerm }) => {
   const [stories, setStories] = useState([]);
@@ -53,14 +54,20 @@ const HackerNews = ({ searchTerm }) => {
             <span className="text-sm text-muted-foreground">
               {story.points} upvotes
             </span>
-            <a
-              href={story.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center text-primary hover:text-accent"
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
             >
-              Read more <ExternalLink className="ml-1 h-4 w-4" />
-            </a>
+              <a
+                href={story.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                Read more <ExternalLink className="ml-1 h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </li>
       ))}
