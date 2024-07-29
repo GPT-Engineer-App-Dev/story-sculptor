@@ -14,9 +14,9 @@ const Navbar = () => {
               HN Reader
             </Link>
           </div>
-          {!isLandingPage && (
-            <div className="flex">
-              {navItems.map((item) => (
+          <div className="flex">
+            {navItems.map((item) => (
+              item.to !== "/" && (
                 <Link
                   key={item.to}
                   to={item.to}
@@ -24,9 +24,9 @@ const Navbar = () => {
                 >
                   {item.title}
                 </Link>
-              ))}
-            </div>
-          )}
+              )
+            ))}
+          </div>
         </div>
       </div>
     </nav>
